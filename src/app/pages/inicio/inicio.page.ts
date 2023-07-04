@@ -14,7 +14,8 @@ interface Componente {
 export class InicioPage implements OnInit {
   components: Componente[] = [
     {icon: 'american-football', name: 'action sheet',redirectTo: '/action-sheet' },
-    {icon: 'alert-circle-outline', name: 'action sheet',redirectTo: '/alert' }
+    {icon: 'alert-circle-outline', name: 'action alert',redirectTo: '/alert' },
+    {icon: 'beaker-outline', name: 'Avatar',redirectTo: '/avatar' }
   ];
   constructor() { }
 
