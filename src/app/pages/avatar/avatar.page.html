@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>avatar</ion-title>
+
+    <ion-buttons slot="end">
+
+      <ion-avatar>
+        <!-- <img [src]="'/assets/images/stan-lee.jpg'" /> -->
+        <ion-img [src]="'/assets/images/stan-lee.jpg'"></ion-img>
+      </ion-avatar>
+
+      <!-- <ion-button (click)="onClick()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        Click me
+      </ion-button> -->
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-chip color="primary" outline="true" *ngFor="let item of [1,1,1,1]">
+    <ion-label>Default</ion-label>
+    <ion-avatar>
+      <ion-img [src]="'/assets/images/stan-lee.jpg'"></ion-img>
+    </ion-avatar>
+  </ion-chip>
+
+  <ion-list>
+    <ion-item  *ngFor="let item of [1,1,1,1]">
+      <ion-avatar slot="start">
+        <ion-img [src]="'/assets/images/stan-lee.jpg'"></ion-img>
+      </ion-avatar>
+      <ion-label>Stan Lee</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
