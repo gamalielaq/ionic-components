@@ -1,0 +1,49 @@
+<app-header titulo="Date Time"></app-header>
+
+<ion-content>
+    <ion-list>
+
+        <ion-list-header>
+            <ion-label>Datos de Nacimieto</ion-label>
+        </ion-list-header>
+
+        <ion-item button="true" id="open-date-input">
+            <ion-label>Fecha de nacimiento</ion-label>
+            <ion-popover trigger="open-date-input" show-backdrop="false" size="cover">
+                <ng-template>
+                    <ion-item>
+                        <ion-datetime
+                            #popoverDatetime
+                            [value]="fechaNacimiento.toISOString()"
+                            (ionChange)="cambiarFecha($event)"
+                            presentation="date"
+                            display-format="DD.MM.YYYY HH:mm">
+                        </ion-datetime>
+                    </ion-item>
+                </ng-template>
+            </ion-popover>
+        </ion-item>
+
+
+        <ion-item button="true" id="open-date-input-1">
+            <ion-label>Restriciones</ion-label>
+            <ion-popover trigger="open-date-input-1" show-backdrop="false" size="cover">
+                <ng-template>
+                    <ion-item>
+                        <ion-datetime
+                            #popoverDatetime
+                            display-format="DD.MM.YYYY HH:mm"
+                            min="2015-01-01"
+                            max="2025-12-31"
+                            >
+                        </ion-datetime>
+                    </ion-item>
+                </ng-template>
+            </ion-popover>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label>Fecha de nacimiento</ion-label>
+            <ion-datetime [value]="fechaNacimiento.toISOString()"></ion-datetime>
+        </ion-item> -->
+    </ion-list>
+</ion-content>
